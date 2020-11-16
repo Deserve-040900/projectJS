@@ -1,0 +1,3 @@
+npm install -g node-sass
+cd e:\NameProject\SASS\
+node-sass.cmd .\filename-1a.scss .\filename-1b.css --output-style compressed

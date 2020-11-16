@@ -1,0 +1,60 @@
+/* Variables */
+$base-color: #7842f5;
+$white: #fff;
+
+/* Mixin */
+@mixin transition {
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+}
+@mixin corner($rad) {
+	-webkit-border-radius: $rad;
+	-moz-border-radius: $rad;
+	border-radius: $rad;
+	-khtml-border-radius: $rad;
+}
+	
+body {
+	background-color: $base-color;
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+	height: 100%;
+}
+
+.watch {
+	width: 800px;
+	margin: 30px auto;
+	color: $white;
+	text-align: center;
+}
+
+h1, h2 {
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+	font-weight: 200;
+	font-size: 2.5em;
+//	text-transform: uppercase;
+}
+
+#minutes, #seconds, #tens {
+	font-size: 5em;
+}
+
+button {
+	@include corner(5px);
+	background-color: $base-color;
+	color: $white;
+	border: solid 2px $white;
+	cursor: pointer;
+	font-size: 1.7em;
+	padding: 18px 10px;
+	width: 150px;
+	margin: 10px;
+	text-decoration: none;
+	outline: none;
+	&:hover {
+		@include transition;
+		background-color: $white;
+		border: solid 2px $base-color;
+		color: $base-color;
+	}
+}
